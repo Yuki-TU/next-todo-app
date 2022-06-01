@@ -1,0 +1,31 @@
+# タスク一覧を取得
+query TaskList {
+  tasks {
+    id
+    title
+    done
+  }
+}
+
+# タスクの追加
+mutation CreateTask($title: String!) {
+  createTask(title: $title) {
+    id
+    title
+    done
+  }
+}
+
+# タスクを更新
+mutation UpdateTask($id: Int!, $title: String!, $done: Boolean!) {
+  updateTask(id: $id, title: $title, done: $done) {
+    id
+  }
+}
+
+# タスクを削除
+mutation DeleteTask($id: Int!) {
+  deleteTask(id: $id) {
+    id
+  }
+}
