@@ -1,8 +1,8 @@
 import { Container, Heading, Stack } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import TaskAddForm from "../src/components/TaskAddForm";
-import TaskList from "../src/components/TaskList";
+import TaskAddForm from "../components/TaskAddForm";
+import TaskList from "../components/TaskList";
 
 const Home: NextPage = () => {
   return (

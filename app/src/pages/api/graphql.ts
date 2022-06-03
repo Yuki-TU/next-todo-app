@@ -1,7 +1,7 @@
 import { ApolloServer } from "apollo-server-micro";
 import Cors from "micro-cors";
-import { createContext } from "../../graphql/context";
-import { schema } from "../../graphql/schema";
+import { createContext } from "../../../graphql/context";
+import { schema } from "../../../graphql/schema";
 
 // corsの設定
 const cors = Cors();
