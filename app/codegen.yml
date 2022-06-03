@@ -1,0 +1,8 @@
+schema: ${NEXT_PUBLIC_TODO_API_URL}
+documents: "./src/**/*.graphql"
+generates:
+  ./src/generated.ts: # 型定義のファイル作成先
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node
