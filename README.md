@@ -17,6 +17,8 @@ $ cp ./app/env.exapmple ./app/.env
 
 # DBサーバーの起動
 $ docker-compose up -d
+# DBにスキーマの適用
+$ yarn prisma migrate dev
 
 # ローカルサーバーの起動
 $ cd ./app
