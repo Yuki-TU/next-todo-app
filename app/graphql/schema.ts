@@ -19,7 +19,8 @@ export const schema = makeSchema({
     schema: join(process.cwd(), "graphql", "schema.graphql"),
   },
   contextType: {
-    //graphql/context.tsファイルを指定
+    // graphql/context.tsファイルを指定
+    // resolver内のcontentよりprismaにアクセスすることができる
     export: "Context",
     module: join(process.cwd(), "graphql", "context.ts"),
   },

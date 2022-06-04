@@ -15,8 +15,11 @@ export type Scalars = {
 
 export type Mutation = {
   __typename?: 'Mutation';
+  /** タスクの追加 */
   createTask: Task;
+  /** タスクの削除 */
   deleteTask: Task;
+  /** タスクの完了フラグの更新 */
   updateTask: Task;
 };
 
@@ -39,9 +42,11 @@ export type MutationUpdateTaskArgs = {
 
 export type Query = {
   __typename?: 'Query';
+  /** タスク一覧配列を返す */
   tasks: Array<Maybe<Task>>;
 };
 
+/** タスク一覧の型定義 */
 export type Task = {
   __typename?: 'Task';
   /** 完了フラグ */
