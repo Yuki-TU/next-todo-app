@@ -2,10 +2,38 @@
 ### Do not make changes to this file directly
 
 
+type Mutation {
+  """タスクの追加"""
+  createTask(
+    """タスクのタイトル"""
+    title: String!
+  ): Task!
+
+  """タスクの削除"""
+  deleteTask(
+    """削除したいタスクid"""
+    id: Int!
+  ): Task!
+
+  """タスクの完了フラグの更新"""
+  updateTask(
+    """完了フラグ"""
+    done: Boolean!
+
+    """タスクid"""
+    id: Int!
+
+    """タイトル"""
+    title: String!
+  ): Task!
+}
+
 type Query {
+  """タスク一覧配列を返す"""
   tasks: [Task]!
 }
 
+"""タスク一覧の型定義"""
 type Task {
   """完了フラグ"""
   done: Boolean!
