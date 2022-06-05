@@ -35,6 +35,7 @@ const TaskList: React.FC = () => {
   if (error) return <p>Error: {error.message}</p>;
 
   // タスクが入れ替わるのを防ぐための処理
+  // @ts-ignore
   const tasks = [...data?.tasks].sort((a: Task, b: Task) => b.id - a.id);
 
   return (

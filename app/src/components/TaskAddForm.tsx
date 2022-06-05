@@ -37,16 +37,19 @@ const TaskAddForm: React.FC = () => {
       <Form>
         <Stack direction="row">
           <Field name="title">
-            {({ field }) => (
-              <FormControl>
-                <Input
-                  {...field}
-                  id="title"
-                  type="text"
-                  placeholder="Add task"
-                />
-              </FormControl>
-            )}
+            {
+              // @ts-ignore
+              ({ field }) => (
+                <FormControl>
+                  <Input
+                    {...field}
+                    id="title"
+                    type="text"
+                    placeholder="Add task"
+                  />
+                </FormControl>
+              )
+            }
           </Field>
           <Button colorScheme="teal" type="submit">
             Submit
